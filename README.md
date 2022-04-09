@@ -5,21 +5,8 @@
   <br>
   <h2>АВТОР КУРСА - ВЛАД САВИЛО</h2>
   <br>
-  <ul>
-    <li>
-      <a href="https://vladsav.github.io/it-academy-computer-science/">
-        <h2>Список занятий</h2>
-      </a>
-    </li>
-    <li>
-      <a href="https://vladsav.github.io/it-academy-computer-science/lesson-1.html">
-        <h2>Лекция 1: Введение</h2>
-      </a>
-    </li>
-    <li>
-      <a href="https://vladsav.github.io/it-academy-computer-science/lesson-2.html">
-        <h2>Лекция 2: Переменные, типы данных, операторы</h2>
-      </a>
-    </li>
-  </ul>
 </p>
+
+* ## [Список занятий](https://vladsav.github.io/it-academy-computer-science/)
+* ## [Лекция 1: Введение](https://vladsav.github.io/it-academy-computer-science/lesson-1.html)
+* ## [Лекция 2: Переменные, типы данных, операторы](https://vladsav.github.io/it-academy-computer-science/lesson-2.html)
