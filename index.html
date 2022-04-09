@@ -5,8 +5,96 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<title>Основы Computer Science - Vlad Savilo</title>
+
+        <link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+        <style>
+			.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+				margin-bottom: 1em;
+			}
+			.reveal ::selection {
+				color: #fff;
+				background: #f00;
+			}
+			.d-flex {
+				display: flex;
+			}
+			.my-photo-circle {
+				display: flex;
+				justify-content: center;
+				margin-bottom: 1em;
+			}
+			.my-photo-circle img {
+				max-width: 300px;
+				border-radius: 50%;
+				margin: 0;
+			}
+        </style>
     </head>
     <body>
-        <h1>First page push test</h1>
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+					<section>
+						<img width="300px" src="https://www.dist.it-academy.by/local/images/logo.svg"/>
+						<p>Основы Computer Science</p>
+					</section>
+					<section>
+						<h3>Автор курса - Влад Савило</h3>
+						<div class="my-photo-circle">
+							<img src="./images/myPhoto.png"/>
+						</div>
+					</section>
+				</section>
+
+                <section>
+                    <h3>Введение в курс</h3>
+					<ul>
+						<li>Определение целей и задач курса.</li>
+						<li>Знакомство с устройством компьютера.</li>
+						<li>Структура IT компании. Роли в проекте.</li>
+						<li>Языки программирования.</li>
+						<li>Понятие среды разработки.</li>
+					</ul>
+
+                    <p><a href="./lesson-1.html" target="_blank">Ссылка на лекцию</a></p>
+                </section>
+
+                <section>
+					<h3>Переменные, типы данных, операторы</h3>
+					<ul style="font-size: 32px;">
+						<li>Введение понятия типа данных.</li>
+						<li>Представление о размере и диапазоне значений.</li>
+						<li>Объяснение понятий «переменная», «идентификатор».</li>
+						<li>Формирование представления о константах, литералах, строках и проводимых с ними операциях.</li>
+						<li>Слушатели изучат примеры программ, будут знать о преобразовании типов данных и освоят на практике линейную вычислительную программу.</li>
+					</ul>
+                    <p><a href="./lesson-2.html" target="_blank">Ссылка на лекцию</a></p>
+				</section>
+
+            </div>
+        </div>
+
+        <script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
     </body>
 </html>
