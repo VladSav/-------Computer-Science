@@ -1,0 +1,331 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Урок 1 - Введение</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		<style>
+			.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+				margin-bottom: 1em;
+			}
+			.reveal ::selection {
+				color: #fff;
+				background: #f00;
+			}
+			.d-flex {
+				display: flex;
+			}
+			.my-photo-circle {
+				display: flex;
+				justify-content: center;
+				margin-bottom: 1em;
+			}
+			.my-photo-circle img {
+				max-width: 300px;
+				border-radius: 50%;
+				margin: 0;
+			}
+			.lotery {
+				display: flex;
+				flex-wrap: wrap;
+			}
+			.lotery > div {
+				/* width: 25%; */
+				flex: 0 0 25%;
+			}
+			ul li.important {
+				font-weight: bold;
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+					<section>
+						<img width="300px" src="https://www.dist.it-academy.by/local/images/logo.svg"/>
+						<p>Основы Computer Science</p>
+					</section>
+					<section>
+						<h3>Автор курса - Влад Савило</h3>
+						<div class="my-photo-circle">
+							<img src="./images/myPhoto.png"/>
+						</div>
+					</section>
+				</section>
+
+				<section>
+					<h3>Введение в курс</h3>
+					<ul>
+						<li>Определение целей и задач курса.</li>
+						<li>Знакомство с устройством компьютера.</li>
+						<li>Структура IT компании. Роли в проекте.</li>
+						<li>Языки программирования.</li>
+						<li>Понятие среды разработки.</li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<p>Немного обо мне:</p>
+						<div class="d-flex">
+							<ul style="font-size: 32px;">
+								<li>Окончил БГУ МехМат</li>
+								<li>Работаю в IT с 2017</li>
+								<li>Направление - web</li>
+								<li>Позиция - full-stack разработчтик</li>
+								<li>Основные языки программирования: JavaScript, TypeScript, Node.js, SQL</li>
+								<li>Имею опыт с: HTML, CSS, PHP, Python, C#, Java, C++, C, UI/UX</li>
+								<li>Сейчас живу в Праге</li>
+							</ul>
+						</div>
+					</section>
+					<section>
+						<p>А теперь о вас:</p>
+						<div class="d-flex">
+							<ul style="font-size: 32px">
+								<li>Откуда вы?</li>
+								<li>Почему IT?</li>
+								<li>Какое направлении интересует?</li>
+								<li>...</li>
+							</ul>
+						</div>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h4>Определение целей и задач курса</h4>
+					</section>
+					<section>
+						<p>(EN) Computer Science == (RU) Информатика</p>
+					</section>
+					<section>
+						<p>Мемасики</p>
+						<div class="d-flex">
+							<img style="height: 530px; margin: auto;" src="./images/1/memes.jpg" />
+						</div>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h4>Знакомство с устройством компьютера</h4>
+					</section>
+					<section>
+						<h5>Вопрос: на какой картинке нет компьютера?</h5>
+					</section>
+					<section>
+						<div class="lotery">
+							<div>
+								<p>1</p>
+								<img src="./images/1/calc.jpg" />
+							</div>
+							<div>
+								<p>2</p>
+								<img src="./images/1/mob.jpg" />
+							</div>
+							<div>
+								<p>3</p>
+								<img src="./images/1/d.jpg" />
+							</div>
+							<div>
+								<p>4</p>
+								<img src="./images/1/not.jpg" />
+							</div>
+							<div>
+								<p>5</p>
+								<img src="./images/1/old.jpg" />
+							</div>
+							<div>
+								<p>6</p>
+								<img src="./images/1/pl.jpg" />
+							</div>
+							<div>
+								<p>7</p>
+								<img src="./images/1/qc.jpg" />
+							</div>
+							<div>
+								<p>8</p>
+								<img src="./images/1/RP4.jpg" />
+							</div>
+						</div>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h4>Структура IT компании. Роли в проекте</h4>
+					</section>
+					<section>
+						<p>Типы компаний</p>
+						<ul>
+							<li>Продуктовые</li>
+							<li>Аутсорс</li>
+							<li>Студии</li>
+							<li>Стартапы</li>
+						</ul>
+					</section>
+					<section data-auto-animate>
+						<div data-id="roles">
+							<h5>Роли</h5>
+							<div class="d-flex">
+								<ul data-id="text-animation" >
+									<li>Владелец/заказчик</li>
+									<li>Руководство</li>
+									<li>Архитектор</li>
+									<li>Аналитик</li>
+									<li>Тимлид</li>
+									<li>Дизайнер</li>
+									<li>Разработчик</li>
+									<li>Тестировщик</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+					<section data-auto-animate>
+						<div data-id="roles">
+							<h5>Вопрос: Какие из ролей необходимы?</h5>
+							<div class="d-flex">
+								<ul data-id="text-animation" >
+									<li>Владелец/заказчик</li>
+									<li>Руководство</li>
+									<li>Архитектор</li>
+									<li>Аналитик</li>
+									<li>Тимлид</li>
+									<li>Дизайнер</li>
+									<li>Разработчик</li>
+									<li>Тестировщик</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+					<section data-auto-animate>
+						<div data-id="roles">
+							<h5>Незаменимые</h5>
+							<div class="d-flex">
+								<ul data-id="text-animation" data-trim>
+									<li class="important">Владелец/заказчик</li>
+									<li class="important">Руководство</li>
+									<li style="text-decoration: line-through;">Архитектор</li>
+									<li style="text-decoration: line-through;">Аналитик</li>
+									<li style="text-decoration: line-through;">Тимлид</li>
+									<li style="text-decoration: line-through;">Дизайнер</li>
+									<li class="important">Разработчик</li>
+									<li style="text-decoration: line-through;">Тестировщик</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h4>Языки программирования</h4>
+					</section>
+					<section>
+						<h5>Вопрос: сколько существует языков программирования?</h5>
+					</section>
+					<section>
+						<h5>
+							<span style="text-transform: lowercase">от</span>&nbsp;&nbsp;150&nbsp;&nbsp;
+							<span style="text-transform: lowercase">до</span>&nbsp;&nbsp;8 945</h5>
+					</section>
+					<section>
+						<p>По версии TIOBE - восстребованность</p>
+					</section>
+					<section>
+						<p>По версии TIOBE топ 10</p>
+						<img src="./images/1/pr-l-1.jpg">
+					</section>
+					<section>
+						<p>По версии TIOBE топ 20</p>
+						<img src="./images/1/pr-l-2.jpg">
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h4>Понятие среды разработки</h4>
+					</section>
+					<section>
+						<p>IDE - integrated development environment - (RU) среда разработки</p>
+					</section>
+					<section>
+						<p style="font-size: 30px;">Когда открыл Visual Studio вместо Visual Studio Code</p>
+						<img src="./images/1/meme-vs-vsc.jpeg" />
+					</section>
+					<section>
+						<p>Обратить внимание</p>
+						<ul style="font-size: 36px; column-count: 2;">
+							<li>Visual Studio Code 😀🔥</li>
+							<li>Visual Studio 😐❗</li>
+							<li>IntelliJ IDEA 😀</li>
+							<li>PyCharm </li>
+							<li>PhpStorm 😀🔥</li>
+							<li>WebStorm 😀🔥</li>
+							<li>Komodo IDE 😀</li>
+							<li>Sublime Text 😀</li>
+							<li>Brackets 😐</li>
+							<li>Atom 😐</li>
+							<li>NetBeans</li>
+							<li>CLion</li>
+							<li>Notepad++ 😀</li>
+							<li>Eclipse 😨</li>
+							<li>Xcode</li>
+							<li>Code::Blocks 😨</li>
+						</ul>
+					</section>			
+				</section>
+
+				<section>
+					<section>
+						<p>Основы Computer Science - IT-academy</p>
+						<img src="./images/chat-qr-code.png" alt="Основы Computer Science - IT-academy" />
+						<p>
+							<a href="https://t.me/+G57nKhGZC_M1NjJi">https://t.me/+G57nKhGZC_M1NjJi</a>
+						</p>
+					</section>
+					<section>
+						<h5>Домашнее задание:</h5>
+						<ol>
+							<li>Присоедениться к группе в телеграмм</li>
+							<li>Установить IDE под свой язык</li>
+							<li>Почитать про профессии и роли в компании</li>
+						</ol>
+					</section>
+					<section>
+						<h4>Спасибо за внимание</h4>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
