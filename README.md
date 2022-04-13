@@ -10,3 +10,4 @@
 * ## [Список занятий](https://vladsav.github.io/it-academy-computer-science/)
 * ## [Лекция 1: Введение](https://vladsav.github.io/it-academy-computer-science/lesson-1.html)
 * ## [Лекция 2: Переменные, типы данных, операторы](https://vladsav.github.io/it-academy-computer-science/lesson-2.html)
+* ## [Лекция 2: Структурное программирование](https://vladsav.github.io/it-academy-computer-science/lesson-3.html)
