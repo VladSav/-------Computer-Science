@@ -1,0 +1,378 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Урок 5 - Использование массивов</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		<style>
+			.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+				margin-bottom: 1em;
+			}
+			.reveal ::selection {
+				color: #fff;
+				background: #f00;
+			}
+			.d-flex {
+				display: flex;
+			}
+			.my-photo-circle {
+				display: flex;
+				justify-content: center;
+				margin-bottom: 1em;
+			}
+			.my-photo-circle img {
+				max-width: 300px;
+				border-radius: 50%;
+				margin: 0;
+			}
+			ul li.important {
+				font-weight: bold;
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+					<section>
+						<img width="300px" src="https://www.dist.it-academy.by/local/images/logo.svg"/>
+						<p>Основы Computer Science</p>
+					</section>
+					<section>
+						<h3>Автор курса - Влад Савило</h3>
+						<div class="my-photo-circle">
+							<img src="./images/myPhoto.png"/>
+						</div>
+					</section>
+				</section>
+
+				<section>
+					<h3>Использование массивов</h3>
+					<ul>
+						<li>Понятие «массивы»</li>
+						<li>Синтаксис массивов и идентификация</li>
+						<li>Примерами использования одномерных массивов на языке блок-схем</li>
+						<li>Напишем соответствующие программы</li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<p>Понятие «массивы»</p>
+					</section>
+					<section>
+						<pre>
+							<code>const arr = [1, 2, 3]</code>
+						</pre>
+					</section>
+					<section>
+						<p>Массив — структура данных, хранящая набор значений, идентифицируемых по индексу или набору индексов, принимающих целые значения из некоторого заданного непрерывного диапазона</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<p>Синтаксис массивов и идентификация</p>
+					</section>
+					<section data-auto-animate>
+						<p>JS</p>
+						<pre>
+<code class="hljs javascript" data-id="array-syntax-js">let a = [] // const a = []
+a.push(1)
+a.unshift(2)
+
+
+
+
+
+</code>
+						</pre>
+					</section>
+					<section data-auto-animate>
+						<p>JS</p>
+						<pre>
+<code class="hljs javascript" data-id="array-syntax-js">let a = [] // const a = []
+a.push(1) // [1]
+a.unshift(2) // [2, 1]
+
+
+
+
+
+</code>
+						</pre>
+					</section>
+					<section data-auto-animate>
+						<p>JS</p>
+						<pre>
+<code class="hljs javascript" data-id="array-syntax-js">let a = [] // const a = []
+a.push(1)
+a.unshift(2)
+
+a.shift()
+a.pop()
+
+
+</code>
+						</pre>
+					</section>
+					<section data-auto-animate>
+						<p>JS</p>
+						<pre>
+<code class="hljs javascript" data-id="array-syntax-js">let a = [] // const a = []
+a.push(1)
+a.unshift(2)
+
+a.shift() // [1]
+a.pop() // []
+
+
+</code>
+						</pre>
+					</section>
+					<section data-auto-animate>
+						<p>JS</p>
+						<pre>
+<code class="hljs javascript" data-id="array-syntax-js">let a = [] // const a = []
+a.push(1)
+a.unshift(2)
+
+a.shift()
+a.pop()
+
+console.log(a.length) // 0</code>
+						</pre>
+					</section>
+
+					<section>
+						<p>Python</p>
+						<pre>
+<code class="hljs python">a = []
+
+
+
+
+
+</code>
+						</pre>
+					</section>
+					<section>
+						<p>Python</p>
+						<pre>
+<code class="hljs python">a = []
+a.append(1)
+a.insert(0, 2)
+
+
+
+
+</code>
+						</pre>
+					</section>
+					<section>
+						<p>Python</p>
+						<pre>
+<code class="hljs python">a = []
+a.append(1) # [1]
+a.insert(0, 2) # [2, 1]
+
+a.pop() # [2]
+a.pop(0) # []
+
+len(a) # 0
+</code>
+						</pre>
+					</section>
+
+					<section>
+						<p>Java</p>
+						<pre>
+<code class="hljs java">import java.util.ArrayList;
+public class Main {
+	public static void main(String[] args) {
+		ArrayList<String> a = new ArrayList<String>();
+		
+		a.add(1);
+		a.add(0, 2);
+
+		a.remove(); // !?
+		a.remove(0);
+
+		system.out.println(a.length)
+	}
+}</code>
+						</pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<p>Примерами использования одномерных массивов на языке блок-схем</p>
+					</section>
+					<section>
+						<img src="./images/5/loop-block-scheme.png" />
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<ul>
+							<li>Массивы</li>
+							<li>Стеки</li>
+							<li>Очереди</li>
+							<li>Связанные списки</li>
+							<li>Графы</li>
+							<li>Деревья</li>
+							<li>Хэш таблицы</li>
+						</ul>
+					</section>
+					<section>
+						<p>Стек - LIFO</p>
+						<p>
+							<span style="color: aquamarine">L</span>ast 
+							<span style="color: aquamarine">I</span>n 
+							<span style="color: aquamarine">F</span>irst 
+							<span style="color: aquamarine">O</span>ut -(последний вошёл - первый вышел)
+						</p>
+						<img width="500px" src="./images/5/stack-plates.jpg">
+					</section>
+					<section>
+						<p>Очередь - FIFO</p>
+						<p>
+							<span style="color: aquamarine">F</span>irst 
+							<span style="color: aquamarine">I</span>n 
+							<span style="color: aquamarine">F</span>irst 
+							<span style="color: aquamarine">O</span>ut -(первый вошёл - первый вышел)
+						</p>
+						<img width="500px" src="./images/5/order.jpg">
+					</section>
+					<section>
+						<p>Связанные списки</p>
+						<img width="500px" src="./images/5/list.jpg">
+					</section>
+					<section>
+						<p>Графы</p>
+						<img width="500px" src="./images/5/graphs.gif">
+					</section>
+					<section>
+						<p>Дерево</p>
+						<img width="500px" src="./images/5/tree.bmp">
+					</section>
+					<section>
+						<p>Хэш таблицы</p>
+						<div style="background-color: #fff;">
+							<img width="500px" src="./images/5/hash-table.png">
+						</div>
+					</section>
+				</section>
+				
+				<section>
+					<pre>
+						<code>
+// Есть города беларуси
+// Некоторые из них соединены дорогой
+// Если города соединены дорогой, значит я могу из А проезать в Б
+// Мне даётся начальный город А и надо из него проехать в город Б
+
+function addCity(name) {
+	map.push({
+		name: name,
+		near: []
+	})
+	return map
+}
+
+function conectCity(fisttCity, secondCity) {
+	for (let city of map) {
+		if (city.name == fisttCity) {
+			city.near.push(secondCity)
+		}
+		if (city.name == secondCity) {
+			city.near.push(fisttCity)
+		}
+	}
+	return map
+}
+
+function findWay(fisttCity, secondCity) {
+	// Писать тут
+}
+
+let map = [
+	{
+		name: 'Minsk',
+		near: ['Vitebsk', 'Brest', 'Grodno']
+	},
+	{
+		name: 'Vitebsk',
+		near: ['Minsk']
+	},
+	{
+		name: 'Brest',
+		near: ['Minsk', 'Grodno']
+	},
+	{
+		name: 'Grodno',
+		near: ['Minsk', 'Brest']
+	}
+]
+
+addCity('Gomel')
+
+console.log(map)
+
+conectCity('Gomel', 'Minsk')
+conectCity('Gomel', 'Brest')
+
+console.log(map)
+
+findWay('Gomel', 'Minsk') // ['Gomel', 'Minsk']
+findWay('Gomel', 'Vitebsk') // ['Gomel', 'Minsk', 'Vitebsk']
+							
+						</code>
+					</pre>
+				</section>
+
+				<section>
+					<section>
+						<h4>Спасибо за внимание</h4>
+					</section>
+					<section>
+						<section>
+							<p>Домашнее задание:</p>
+							<p style="text-align: left;">1. Переписать программу которая выводит все числа фибоначи до заданного порядка используя массивы и не используя дополнительные переменные<br/>Кто использовал рекурсию написать через массив и циклы</p>
+
+							<p style="text-align: left;">2. Закончить с графами - построить маршрут между городами</p>
+						</section>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

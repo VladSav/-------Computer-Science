@@ -12,3 +12,4 @@
 * ## [Лекция 2: Переменные, типы данных, операторы](https://vladsav.github.io/it-academy-computer-science/lesson-2.html)
 * ## [Лекция 3: Структурное программирование](https://vladsav.github.io/it-academy-computer-science/lesson-3.html)
 * ## [Лекция 4: Применение циклических конструкций](https://vladsav.github.io/it-academy-computer-science/lesson-4.html)
+* ## [Лекция 5: Использование массивов](https://vladsav.github.io/it-academy-computer-science/lesson-5.html)
