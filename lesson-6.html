@@ -1,0 +1,464 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Урок 6 - Алгоритмы</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		<style>
+			.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+				margin-bottom: 1em;
+			}
+			.reveal ::selection {
+				color: #fff;
+				background: #f00;
+			}
+			.d-flex {
+				display: flex;
+			}
+			.my-photo-circle {
+				display: flex;
+				justify-content: center;
+				margin-bottom: 1em;
+			}
+			.my-photo-circle img {
+				max-width: 300px;
+				border-radius: 50%;
+				margin: 0;
+			}
+			.img-back-white {
+				background-color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+					<section>
+						<img width="300px" src="https://www.dist.it-academy.by/local/images/logo.svg"/>
+						<p>Основы Computer Science</p>
+					</section>
+					<section>
+						<h3>Автор курса - Влад Савило</h3>
+						<div class="my-photo-circle">
+							<img src="./images/myPhoto.png"/>
+						</div>
+					</section>
+				</section>
+
+				<section>
+					<h3>Алгоритмы. Подведение итогов</h3>
+				</section>
+
+				<section>
+					<section>Что такое нотация О большое и почему оно важно?</section>
+					<section>
+						<p style="text-align: left">«Нотация О большое — это математическая нотация, которая описывает ограничивающее поведение функции, когда аргумент стремится к определенному значению или бесконечности</p>
+					</section>
+					<section>
+						<img src="./images/6/big_o_graph.png" />
+					</section>
+					<section>
+						<img src="./images/6/big-o-values.jpg" />
+					</section>
+					<section>
+						Может быть и хуже...
+					</section>
+					<section>
+						<p style="color: #f00">Факториал - n!</p>
+						<p>100! = 1 * 2 * 3 * ... * 99 * 100</p>
+						<p style="text-align: left">100! = 93 326 215 443 944 152 681 699 238 856 266 700 490 715 968 264 381 621 468 592 963 895 217 599 993 229 915 608 941 463 976 156 518 286 253 697 920 827 223 758 251 185 210 916 864 000 000 000 000 000 000 000 000</p>
+					</section>
+					<section>
+						<img src="./images/6/structure-actions-diff.png" />
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<p>Сортировка</p>
+					</section>
+					<section>
+						<p>Массив из 5000 чисел от 0 до 1000</p>
+						<img width="500px" src="./images/6/sravnenie_algoritmov_sortirovki.png" />
+					</section>
+					<section>
+						<p>Пузырьковая сортировка</p>
+						<img src="./images/6/bubble.gif" />
+					</section>
+					<section>
+						<pre style="width: 100%; margin: 0;"><code class=" python">def bubble_sort(nums):
+	# Устанавливаем swapped в True, чтобы цикл запустился
+	swapped = True
+	while swapped:
+		swapped = False
+		for i in range(len(nums) - 1):
+			if nums[i] > nums[i + 1]:
+				nums[i], nums[i + 1] = nums[i + 1], nums[i]
+				# Устанавливаем swapped в True для следующей итерации
+				swapped = True
+
+random_list_of_nums = [5, 2, 1, 8, 4]
+bubble_sort(random_list_of_nums)</code>
+						</pre>
+					</section>
+					<section>
+						<div class="img-back-white">
+							<img src="./images/6/bubble-params.png">
+						</div>
+					</section>
+					<section>
+						<p>Сортировка выборкой</p>
+						<img src="./images/6/choise.gif">
+					</section>
+					<section>
+						<pre style="width: 100%; margin: 0;"><code class="java">void SelectionSort(vector<int>& values) {
+	for (auto i = values.begin(); i != values.end(); ++i) {
+		auto j = std::min_element(i, values.end());
+		swap(*i, *j);
+	}
+}</code></pre>
+					</section>
+					<section>
+						
+						<h3 style="color: #f00">С ошибкой. Найти и исправить самостоятельно!</h3>
+						<pre style="width: 100%; margin: 0;"><code class="python">def selection_sort(nums):
+	# Значение i соответствует кол-ву отсортированных значений
+	for i in range(len(nums)):
+		# Исходно считаем наименьшим первый элемент
+		lowest_value_index = i
+		# Этот цикл перебирает несортированные элементы
+		for j in range(i + 1, len(nums)):
+			if nums[j] < nums[lowest_value_index]:
+				lowest_value_index = j
+		# Самый маленький элемент меняем с первым в списке
+		nums[i], nums[lowest_value_index] = nums[lowest_value_index], nums[i]
+
+random_list_of_nums = [12, 8, 3, 20, 11]
+selection_sort(random_list_of_nums)</code></pre>
+					</section>
+					<section>
+						<div class="img-back-white">
+							<img src="./images/6/choise-params.png">
+						</div>
+					</section>
+					<section>
+						<p>Сортировка вставками</p>
+						<img src="./images/6/inserts.gif">
+					</section>
+					<section>
+						<pre style="width: 100%; margin: 0; height: 54vh;"><code class="python">def insertion_sort(nums):
+	# Сортировку начинаем со второго элемента, 
+	# т.к. считается, что первый элемент уже отсортирован
+	for i in range(1, len(nums)):
+		item_to_insert = nums[i]
+		# Сохраняем ссылку на индекс предыдущего элемента
+		j = i - 1
+		# Элементы отсортированного сегмента перемещаем вперёд, 
+		# если они больше элемента для вставки
+		while j >= 0 and nums[j] > item_to_insert:
+			nums[j + 1] = nums[j]
+			j -= 1
+		# Вставляем элемент
+		nums[j + 1] = item_to_insert
+
+random_list_of_nums = [9, 1, 15, 28, 6]
+insertion_sort(random_list_of_nums)</code></pre>
+					</section>
+					<section>
+						<div class="img-back-white">
+							<img src="./images/6/inserts-params.png">
+						</div>
+					</section>
+					<section>
+						<p>Пирамидальная сортировка</p>
+						<img src="./images/6/pyramid.gif">
+					</section>
+					<section>
+						<p style="text-align: left;">В информатике ку́ча (англ. heap) — это специализированная структура данных типа дерево, которая удовлетворяет свойству кучи: если B является узлом-потомком узла A, то ключ(A) ≥ ключ(B).</p>
+					</section>
+					<section>
+						<div class="img-back-white">
+							<img width="500px" src="./images/6/heap.svg.png" />
+						</div>
+					</section>
+					<section>
+						<pre style="width: 100%; margin: 0;"><code class="python">def heapify(nums, heap_size, root_index):
+	# Индекс наибольшего элемента считаем корневым индексом
+	largest = root_index
+	left_child = (2 * root_index) + 1
+	right_child = (2 * root_index) + 2
+
+	# Если левый потомок корня — допустимый индекс, а элемент больше,
+	# чем текущий наибольший, обновляем наибольший элемент
+	if left_child < heap_size and nums[left_child] > nums[largest]:
+		largest = left_child
+
+	# То же самое для правого потомка корня
+	if right_child < heap_size and nums[right_child] > nums[largest]:
+		largest = right_child
+
+	# Если наибольший элемент больше не корневой, они меняются местами
+	if largest != root_index:
+		nums[root_index], nums[largest] = nums[largest], nums[root_index]
+		# Heapify the new root element to ensure it's the largest
+		heapify(nums, heap_size, largest)
+
+def heap_sort(nums):
+	n = len(nums)
+
+	# Создаём Max Heap из списка
+	# Второй аргумент означает остановку алгоритма перед элементом -1,
+	# т.е. перед первым элементом списка
+	# 3-й аргумент означает повторный проход по списку 
+	# в обратном направлении, уменьшая счётчик i на 1
+	for i in range(n, -1, -1):
+		heapify(nums, n, i)
+
+	# Перемещаем корень Max Heap в конец списка
+	for i in range(n - 1, 0, -1):
+		nums[i], nums[0] = nums[0], nums[i]
+		heapify(nums, i, 0)
+
+random_list_of_nums = [35, 12, 43, 8, 51]
+heap_sort(random_list_of_nums)</code></pre>
+					</section>
+					<section>
+						<div class="img-back-white">
+							<img src="./images/6/pyramid-params.png">
+						</div>
+					</section>
+					<section>
+						<p>Сортировка слиянием</p>
+						<img src="./images/6/merge.gif">
+					</section>
+					<section>
+						<pre style="width: 100%; margin: 0;"><code class="python">def merge(left_list, right_list):
+	sorted_list = []
+	left_list_index = right_list_index = 0
+
+	# Длина списков часто используется,
+	# поэтому создадим переменные для удобства
+	left_length, right_length = len(left_list), len(right_list)
+
+	for _ in range(left_length + right_length):
+		if left_list_index < left_length and right_list_index < right_length:
+			# Сравниваем первые элементы в начале каждого списка
+			# Если первый элемент левого подсписка меньше, добавляем его
+			# в отсортированный массив
+			if left_list[left_list_index] <= right_list[right_list_index]:
+				sorted_list.append(left_list[left_list_index])
+				left_list_index += 1
+			# Если первый элемент правого подсписка меньше, добавляем его
+			# в отсортированный массив
+			else:
+				sorted_list.append(right_list[right_list_index])
+				right_list_index += 1
+
+		# Если достигнут конец левого списка, элементы правого списка
+		# добавляем в конец результирующего списка
+		elif left_list_index == left_length:
+			sorted_list.append(right_list[right_list_index])
+			right_list_index += 1
+		# Если достигнут конец правого списка, элементы левого списка
+		# добавляем в отсортированный массив
+		elif right_list_index == right_length:
+			sorted_list.append(left_list[left_list_index])
+			left_list_index += 1
+
+	return sorted_list
+
+def merge_sort(nums):
+	# Возвращаем список, если он состоит из одного элемента
+	if len(nums) <= 1:
+		return nums
+
+	# Для того чтобы найти середину списка, используем деление без остатка
+	# Индексы должны быть integer
+	mid = len(nums) // 2
+
+	# Сортируем и объединяем подсписки
+	left_list = merge_sort(nums[:mid])
+	right_list = merge_sort(nums[mid:])
+
+	# Объединяем отсортированные списки в результирующий
+	return merge(left_list, right_list)
+
+random_list_of_nums = [120, 45, 68, 250, 176]
+random_list_of_nums = merge_sort(random_list_of_nums)</code></pre>
+					</section>
+					<section>
+						<div class="img-back-white">
+							<img src="./images/6/merge-params.png">
+						</div>
+					</section>
+					<section>
+						<p>Быстрая сортировка</p>
+						<img src="./images/6/fast.gif">
+					</section>
+					<section>
+						<pre style="width: 100%; margin: 0;"><code class="python">def partition(nums, low, high):
+	# Выбираем средний элемент в качестве опорного
+	# Также возможен выбор первого, последнего
+	# или произвольного элементов в качестве опорного
+	pivot = nums[(low + high) // 2]
+	i = low - 1
+	j = high + 1
+	while True:
+		i += 1
+		while nums[i] < pivot:
+			i += 1
+
+		j -= 1
+		while nums[j] > pivot:
+			j -= 1
+
+		if i >= j:
+			return j
+
+		# Если элемент с индексом i (слева от опорного) больше, чем
+		# элемент с индексом j (справа от опорного), меняем их местами
+		nums[i], nums[j] = nums[j], nums[i]
+
+def quick_sort(nums):
+	# Создадим вспомогательную функцию, которая вызывается рекурсивно
+	def _quick_sort(items, low, high):
+		if low < high:
+			# This is the index after the pivot, where our lists are split
+			split_index = partition(items, low, high)
+			_quick_sort(items, low, split_index)
+			_quick_sort(items, split_index + 1, high)
+
+	_quick_sort(nums, 0, len(nums) - 1)
+
+random_list_of_nums = [22, 5, 1, 18, 99]
+quick_sort(random_list_of_nums)</code></pre>
+					</section>
+					<section>
+						<div class="img-back-white">
+							<img src="./images/6/fast-params.png">
+						</div>
+					</section>
+					<section>
+						<p>Массив из 5000 чисел от 0 до 1000</p>
+						<img width="500px" src="./images/6/sravnenie_algoritmov_sortirovki.png" />
+					</section>
+				</section>
+
+				<section>
+					<p>Материалы</p>
+					<ul style="font-size: 24px;">
+						<li><a href="https://tproger.ru/translations/sorting-algorithms-in-python/" target="_blank">Объяснение алгоритмов сортировки с примерами на Python</a></li>
+						<li><a href="https://tproger.ru/digest/sorting-algorithms-visualized/" target="_blank">Визуализации алгоритмов сортировки</a></li>
+						<li><a href="https://academy.yandex.ru/posts/osnovnye-vidy-sortirovok-i-primery-ikh-realizatsii" target="_blank">Основные виды сортировок и примеры их реализации</a></li>
+
+						<li><a href="https://www.youtube.com/channel/UCEGOjrd-vGI7ZNlOXTI3HpA" target="_blank">YouTube - Viktor Karpov - Алгосики для самых маленьких</a></li>
+
+						<li><a href="https://www.codewars.com/" target="_blank">codewars.com</a></li>
+						<li><a href="https://leetcode.com/" target="_blank">leetcode.com</a></li>
+
+						<li>Грокаем алгоритмы. Иллюстрированное пособие для программистов и любопытствующих | Бхаргава Адитья</li>
+						<li>Теоретический минимум по Computer Science. Все что нужно программисту и разработчику | Фило Владстон Феррейра</li>
+						<li>Рисовый штурм и еще 21 способ мыслить нестандартно | Майкл Микалко</li>
+					</ul>
+				</section>
+
+				<section>
+					<section>Темы курса</section>
+					<section>
+						<ul style="font-size: 32px;">
+							<li>Определение целей и задач курса.</li>
+							<li>Знакомство с устройством компьютера.</li>
+							<li>Структура IT компании. Роли в проекте.</li>
+							<li>Языки программирования.</li>
+							<li>Понятие среды разработки.</li>
+						</ul>
+					</section>
+					<section>
+						<ul style="font-size: 32px;">
+							<li>Введение понятия типа данных.</li>
+							<li>Представление о размере и диапазоне значений.</li>
+							<li>Объяснение понятий «переменная», «идентификатор».</li>
+							<li>Формирование представления о константах, литералах, строках и проводимых с ними операциях.</li>
+							<li>Слушатели изучат примеры программ, будут знать о преобразовании типов данных и освоят на практике линейную вычислительную программу.</li>
+						</ul>
+					</section>
+					<section>
+						<ul style="font-size: 32px;">
+							<li>Знания об операторах ветвлений, сравнения.</li>
+							<li>Информация об использовании ветвления в блок-схемах.</li>
+							<li>Изучение способов записи и дополнительных конструкций сложного ветвления.</li>
+							<li>Обучаемые освоят логические операции, а также потренируются делать программу с разветвлениями.</li>
+						</ul>
+					</section>
+					<section>
+						<ul style="font-size: 32px;">
+							<li>Формирование знаний о необходимости применения циклов, их обозначении на рабочем языке курса.</li>
+							<li>Знакомство с понятиями «вложенные циклы», «прерывание цикла», а также с примерами использования циклических конструкций.</li>
+							<li>Учащиеся получат навыки пошагового выполнения цикла в режиме отладки.</li>
+						</ul>
+					</section>
+					<section>
+						<ul style="font-size: 32px;">
+							<li>Понятие «массивы»</li>
+							<li>Синтаксис массивов и идентификация</li>
+							<li>Примерами использования одномерных массивов на языке блок-схем</li>
+							<li>Напишем соответствующие программы</li>
+						</ul>
+					</section>
+					<section>
+						<ul style="font-size: 32px;">
+							<li>Алгоритмы</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section><h1>ТЕСТ</h1></section>
+					<section>1. Вы готовы стать программистом?</section>
+					<section>2. Вы выбрали профессию?</section>
+					<section>3. Вы знаете что Вам учить дальше?</section>
+					<section>
+						<pre><code>if (answer1 && answer2 && answer3) {
+	return 'Congratulations'
+} else {
+	return 'Think about it'
+}</code></pre>
+					</section>
+				</section>
+
+				<section>
+					
+					<section>
+						<h4>Спасибо за внимание</h4>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
