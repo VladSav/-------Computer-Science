@@ -13,4 +13,4 @@
 * ## [Лекция 3: Структурное программирование](https://vladsav.github.io/it-academy-computer-science/lesson-3.html)
 * ## [Лекция 4: Применение циклических конструкций](https://vladsav.github.io/it-academy-computer-science/lesson-4.html)
 * ## [Лекция 5: Использование массивов](https://vladsav.github.io/it-academy-computer-science/lesson-5.html)
-* ## [Лекция 5: Алгоритмы](https://vladsav.github.io/it-academy-computer-science/lesson-6.html)
+* ## [Лекция 6: Алгоритмы](https://vladsav.github.io/it-academy-computer-science/lesson-6.html)
